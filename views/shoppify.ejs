@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoppify</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      li a:hover {
+        color: black;
+      }
+
+      #footer {
+        font-size: 24px;
+        font-style: italic;
+        font-weight: bolder;
+        color: white;
+      }
+
+      #x {
+        color: black;
+      }
+    </style>
+
+    <div
+      class="container-fluid"
+      style="background: linear-gradient(to left, black, white, yellow)"
+    >
+      <div class="row">
+        <div class="col-md-3">
+          <img src="/images/logo.png" height="110px" />
+        </div>
+
+        <div class="col-md-7" style="padding: 10px">
+          <h1 style="font-size: 80px; font-family: Chinyen">S H O P P I F Y</h1>
+        </div>
+
+        <div class="col-md-2" style="padding: 20px">
+          <a routerLink="/login" routerLinkActive="active"
+            ><button class="btn btn-danger" style="font-size: 30px">
+              LOG IN
+            </button></a
+          >
+        </div>
+      </div>
+
+      <div class="row">
+        <ul
+          style="
+            list-style-type: none;
+            overflow: hidden;
+            background-color: black;
+            color: wheat;
+            text-decoration: none;
+          "
+        >
+          <li
+            style="
+              display: block;
+              float: left;
+              font-style: italic;
+              font-family: 'Franklin Gothic Medium';
+              font-weight: bolder;
+              padding: 30px;
+              font-size: 30px;
+              color: wheat;
+              text-decoration: none;
+            "
+          >
+            <a style="text-decoration: none; color: white" href="#">HOME</a>
+          </li>
+          <li
+            style="
+              display: block;
+              float: left;
+              font-style: italic;
+              font-family: 'Franklin Gothic Medium';
+              font-weight: bolder;
+              padding: 30px;
+              font-size: 30px;
+              color: wheat;
+              text-decoration: none;
+            "
+          >
+            <a style="text-decoration: none; color: white" href="#">ABOUT US</a>
+          </li>
+          <li
+            style="
+              display: block;
+              float: left;
+              font-style: italic;
+              font-family: 'Franklin Gothic Medium';
+              font-weight: bolder;
+              padding: 30px;
+              font-size: 30px;
+              color: wheat;
+              text-decoration: none;
+            "
+          >
+            <a
+              style="text-decoration: none; color: white"
+              href="#"
+              routerLink="/outlets"
+              routerLinkActive="active"
+              >OFFLINE OUTLETS</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </head>
+
+  <body>
+    <script
+      src="https://cdn.jsde
+      livr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <div
+      class="container-fluid"
+      style="padding: 20px; background: linear-gradient(white, yellow)"
+    >
+      <div class="row" style="background: linear-gradient(white, yellow)">
+        <div class="col-md-3">
+          <div class="container-fluid" style="text-align: center">
+            <div class="row">
+              <div class="col-md-10">
+                <div class="row">
+                  <input type="search" />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <button class="btn btn-danger">SEARCH</button>
+              </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+              <h2 style="font-family: Alien Encounters; font-size: 50px">
+                CATEGORIES
+              </h2>
+              <hr />
+              <br />
+
+              <ul
+                id="sidebar"
+                style="
+                  list-style-type: square;
+                  font-size: 20px;
+                  font-weight: bold;
+                  font-style: italic;
+                "
+              >
+                <li><a href="#" id="x">Electronics</a></li>
+                <br />
+                <li><a href="#" id="x">Mobiles</a></li>
+                <br />
+                <li><a href="#" id="x">Computers</a></li>
+                <br />
+                <li><a href="#" id="x">Fashion - Men</a></li>
+                <br />
+                <li><a href="#" id="x">Fashion - Women</a></li>
+                <br />
+                <li><a href="#" id="x">Personal Grooming</a></li>
+                <br />
+                <li><a href="#" id="x">Home Appliances</a></li>
+                <br />
+                <li><a href="#" id="x">Pets </a></li>
+                <br />
+                <li><a href="#" id="x">Home Furnishing</a></li>
+                <br />
+                <li><a href="#" id="x">Others</a></li>
+                <br />
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-9">
+          <div class="container-fluid">
+            <div class="row">
+              <h2 style="font-weight: bolder; text-align: center">
+                Mega Sale on Electronics !!!
+              </h2>
+            </div>
+            <br />
+            <div class="row">
+              <div class="col-md-4">
+                <img src="/images/tv.jpg" height="250" />
+                <br />
+                <h3>Samsung TV - 500$</h3>
+                <hr />
+                <button class="btn btn-warning">Buy Now</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-warning">Add to Cart</button>
+              </div>
+              <div class="col-md-4">
+                <img src="/images/phone.png" height="250" />
+                <br />
+                <h3>OnePlus Nord 5g - 150$</h3>
+                <hr />
+                <button class="btn btn-warning">Buy Now</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-warning">Add to Cart</button>
+              </div>
+              <div class="col-md-4">
+                <img src="/images/laptop.png" height="250" width="350px" />
+                <br />
+                <h3>HP Pavillion - 1000$</h3>
+                <hr />
+                <button class="btn btn-warning">Buy Now</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-warning">Add to Cart</button>
+              </div>
+            </div>
+
+            <br />
+            <hr />
+            <hr />
+
+            <div class="row">
+              <img src="/images/backg.png" height="250" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+    <div class="container-fluid" style="background-color: black">
+      <div class="row">
+        <div class="col-md-7">
+          <label id="footer"
+            ><a href="#" style="text-decoration: none; color: white"
+              >Licences</a
+            ></label
+          >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label id="footer"
+            ><a href="#" style="text-decoration: none; color: white"
+              >Contact Us</a
+            ></label
+          >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label id="footer"
+            ><a href="#" style="text-decoration: none; color: white"
+              >Mail Us</a
+            ></label
+          >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <label id="footer"
+            ><a href="#" style="text-decoration: none; color: white"
+              >Headquarters</a
+            ></label
+          >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+
+        <div class="col-md-5">
+          <label id="footer"
+            >Copyright @ ShoppifyInternationals Pvt Ltd (2022)</label
+          >
+        </div>
+      </div>
+    </div>
+  </footer>
+</html>

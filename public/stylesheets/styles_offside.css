@@ -1,0 +1,35 @@
+#header
+{
+    background-color: yellow;
+    color: black;    
+}
+
+#offside{
+    font-size: 50px;
+    font-family: Chinyen;
+    animation: MultipleColours;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    padding-top: 15px;
+    padding-left: 18px;
+}
+
+@keyframes MultipleColours{
+    0% {color: yellow;}
+    25% {color: orange;}
+    50% {color: red;
+        transform: translateX(600px);
+    }
+    75% {color: brown;}
+    100% {color: black;}
+}
+
+#madrid{
+    animation: smoothbounceball;
+    animation-iteration-count: infinite;
+    animation-duration: 3s;
+}
+
+
+
+

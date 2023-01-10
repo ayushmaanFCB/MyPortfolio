@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EazyPay - Pay Smart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="stylesheets/styles_eazyPay.css" />
+
+  <style>
+    .col-md-2{
+    /*border-style: solid;*/
+    text-align: center;
+    background-color:rgb(47, 47, 177);
+    height: 200px;
+    padding: 20px;
+}
+
+
+
+.features{
+    color: white;
+    font-size: 20px;
+    font-family: arial rounded mt;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+    }
+}
+
+.navlabel{
+    font-family: arial rounded mt;
+    color: lavender;
+    font-size: 24px;
+}
+
+#contact{
+    font-family: arial rounded mt;
+    background-color: rgb(166, 166, 245);
+   
+}
+
+.app-download-overview .app-download-overview__content .app-download-overview__content__download-btns {
+    display: flex;
+    flex-direction: column;
+}
+  </style>
+</head>
+
+<body >
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-dark  " style="border-bottom-style:solid; border-width: 10px; border-color: black;
+                    background-color: rgb(0, 0, 0)">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="/images/elogo.png" alt="">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="color: white;"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#rechargeNpay"><label class="navlabel">Services</label></a>
+              </li>
+              &nbsp;&nbsp;&nbsp;
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <label class="navlabel">Information</label>
+                </a>
+                <ul class="dropdown-menu dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#news" class="navlabel">
+                      <label class="navlabel"style="font-size: 18px;">News and Media</label></a></li>
+                  <li>
+                    <a class="dropdown-item" href="#contact">
+                      <label class="navlabel" style="font-size: 18px;">Contact Us</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <label style="font-size: 18px; color: white;">Download the app now:&nbsp;&nbsp;</label>
+            <a href="#"><button type="button" style="margin-right: 40px;">              
+              <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.6593 15.3557C10.7589 16.1979 9.76546 16.0666 8.81854 15.6695C7.81182 15.2644 6.89149 15.2388 5.82828 15.6695C4.50426 16.2203 3.80155 16.0602 3.00415 15.3557C-1.49786 10.8883 -0.833353 4.08311 4.28331 3.82691C5.52427 3.89096 6.39311 4.48821 7.12406 4.53785C8.21052 4.32489 9.25047 3.71483 10.4133 3.79489C11.8105 3.90377 12.8554 4.43538 13.5531 5.3913C10.6791 7.05657 11.3603 10.7073 14 11.7321C13.4717 13.0691 12.7939 14.3902 11.6576 15.3669L11.6593 15.3557ZM7.02439 3.77888C6.88982 1.79336 8.55939 0.160122 10.4798 0C10.7439 2.28974 8.32017 4.00305 7.02439 3.77888Z" fill="black">
+                </path>  
+              </svg>
+              &nbsp;&nbsp;
+              <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0.088012 0.571735C0.0310801 0.726729 0 0.910797 0 1.121V14.8786C0 15.0894 0.0311427 15.2736 0.0881839 15.4286L7.32808 7.9997L0.088012 0.571735ZM0.590122 15.9564C0.85223 16.0466 1.18264 15.9995 1.54068 15.7912L10.0736 10.8165L7.83627 8.52109L0.590122 15.9564ZM10.7221 10.4391L13.3647 8.8987C14.2118 8.40415 14.2118 7.59609 13.3647 7.10217L10.7211 5.561L8.34443 7.99966L10.7221 10.4391ZM10.073 5.18317L1.54068 0.209061C1.18252 0.000250885 0.852017 -0.0466058 0.589868 0.0438429L7.83624 7.47828L10.073 5.18317Z" fill="#101010">
+                  </path>
+              </svg>
+            </button></a>
+             <form class="d-flex" style="margin-right:50px">
+              <a href="#"><button style="background-color: black ; ">
+                <img src="https://assetscdn1.paytm.com/frontendcommonweb/9a65db05.svg" st>
+                <label style="color: white; font-family: arial rounded mt;">SIGN IN</label>
+              </button></a>
+            </form>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Look for services" aria-label="Search?" />
+              <button class="btn btn-primary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row" style="padding: 80px; background-color: rgb(166, 166, 245);">
+      <div class="col-md-6" style="background-color: rgb(166, 166, 245); font-family: arial rounded mt;">
+        <p style="margin-top: 40px;">
+        <h1 style="font-family: Cooper Black; text-decoration: underline;">Simple, Fast &amp; Secure</h1><br>
+        <h2>One app for all things money.</h2>
+        <p>
+          Pay bills, recharge, send money, buy gold, invest and shop at your
+          favourite stores.
+        </p>
+        <hr>
+        <h2>Pay whenever you like, wherever you like.</h2>
+        <p>
+          Choose from options like UPI, the EazyPay wallet or your Debit and
+          Credit Card.
+        </p>
+        <hr>
+        <h2>Find all your favourite apps on EazyPay Switch.</h2>
+        <p>
+          Book flights, order food or buy groceries. Use all your favourite
+          apps without downloading them.
+        </p>
+        </p>
+      </div>
+
+
+      <div class="col-md-6" style="background-color: rgb(166, 166, 245);">
+        <p style="text-align: center;"><img src="/images/EazyPayHome.png" alt="**" ></p>
+        </div>
+      </div>
+    </div>
+
+      
+
+
+      <div class=" row align-items-center" style="padding: 50px; background-color: rgb(47, 47, 177)" id="rechargeNpay">
+        <div class="col-md-12">
+          <div class="row">
+            <label style="
+                font-size: 35px;
+                font-family: arial rounded mt;
+                background-color: rgb(47, 47, 177);
+                color: white;
+              ">
+              Recharge and Pay Bills on EazyPay
+            </label>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-2">
+              <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/733299/1626251017535.png"
+                  alt="" /></a><br />
+              <label class="features">Recharge Mobile</label>
+            </div>
+            <div class="col-md-2">
+              <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/733300/1626778824903.png"
+                  alt="" /></a><br />
+              <label class="features">Pay Rent Payment</label>
+            </div>
+            <div class="col-md-2">
+              <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/733308/1626251043534.png"
+                  alt="" /></a><br />
+              <label class="features">Pay Electricity Bills</label>
+            </div>
+            <div class="col-md-2">
+              <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/733311/1626251101045.png"
+                  alt="" /></a><br />
+              <label class="features">Recharge DTH</label>
+            </div>
+            <div class="col-md-2">
+              <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/733304/1627454209116.png"
+                  alt="" /></a><br />
+              <label class="features">Pay Credit Card Bills</label>
+            </div>
+            <div class="col-md-2">
+              <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/733307/1626251127863.png"
+                  alt="" /></a><br />
+              <label class="features">Book Gas Cylinder</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+      <div class="row align-items-center" style="padding: 50px; background-color: rgb(21, 21, 111)" id="bookNbuy">
+        <div class="col-md-12">
+          <div class="row">
+            <label style="
+                font-size: 35px;
+                font-family: arial rounded mt;
+                background-color: rgb(21, 21, 111);
+                color: white;
+              ">
+              Book & Buy on EazyPay
+            </label>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-2" style="background-color: rgb(21, 21, 111);">
+              <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/733295/1626259710574.png"
+                  height="130px" alt="" /></a><br />
+              <label class="features">Movie Tickets</label>
+            </div>
+            <div class="col-md-2" style="background-color: rgb(21, 21, 111);">
+              <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/733296/1626259884425.png"
+                  height="130px" alt="" /></a><br />
+              <label class="features">Flight Tickets</label>
+            </div>
+            <div class="col-md-2" style="background-color: rgb(21, 21, 111);">
+              <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/729996/1626260477699.png"
+                  height="130px" alt="" /></a><br />
+              <label class="features">Bus Tickets</label>
+            </div>
+            <div class="col-md-2" style="background-color: rgb(21, 21, 111);">
+              <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/729997/1626260495975.png"
+                  height="130px" alt="" /></a><br />
+              <label class="features">Train Tickets</label>
+            </div>
+            <div class="col-md-2" style="background-color: rgb(21, 21, 111);">
+              <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/729999/1626259968563.png"
+                  height="130px" alt="" /></a><br />
+              <label class="features">International Flights</label>
+            </div>
+            <div class="col-md-2" style="background-color: rgb(21, 21, 111);">
+              <a href=""><img src="https://assetscdn1.paytm.com/images/catalog/view_item/730001/1626450848003.png"
+                  height="130px" alt="" /></a><br />
+              <label class="features">Invest in Stocks</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="row" style="padding: 50px; background-color: lavender;" id="news">
+        <div class="col-md-12" style="background-color: lavender;">
+          <div class="album py-5 ">
+
+            <h1 style="margin-top: -35px; text-align: center; font-family:arial rounded mt; font-size: 60px;">
+              DOMINATING NEWS & MEDIA</h1>
+            <br>
+            <div class="container" style="background-color: lavender;">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <div class="card-body bg-dark">
+                      <p style="text-align: center;"><img src="/images/news1.png" width="380px">
+                        <hr>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-primary btn-lg">Read More</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <div class="card-body bg-dark">
+                      <p style="text-align: center;"><img src="/images/news2.png " width="380px">
+                        <hr>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-primary btn-lg">Read More</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <div class="card-body bg-dark">
+                      <p style="text-align: center;"><img src="/images/news3.png" width="380px">
+                        <hr>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-primary btn-lg">Read More</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row" id="contact" style="padding: 50px;">
+        <h1>Customer Support Details</h1>
+        <p>Ask us anything and we'll help you find the answers. Response time: within 24 hours</p>
+        <hr>
+
+        <div class="col-md-4">
+          <h2>Help</h2>
+          <p>Need help with the EazyPay app? Send us a message and we'll get back to you at the earliest.</p>
+          <div class="cu-customer-support__content__item__cbp">
+          <p><img
+              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGlkPSJhIiBkPSJNLjAyNC4wNTJoMjkuOTczdjEzLjg0NEguMDI0eiIvPjxwYXRoIGlkPSJjIiBkPSJNLjAwMi4xODhoMjkuOTlWOUguMDAyeiIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIgLjg0NikiPjxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj48dXNlIHhsaW5rOmhyZWY9IiNhIi8+PC9tYXNrPjxwYXRoIGQ9Ik0uMDI0LjE2NEMuNDQuMTIuNzY4LjA1OCAxLjA5NC4wNTggOC42MDguMDUyIDE2LjEyMi4wNTQgMjMuNjM2LjA1NGMxLjc5IDAgMy41OC0uMDA1IDUuMzcuMDA0LjMwNC4wMDIuNjA3LjA2NSAxLjAxOC4xMTItLjUwNy41MTgtLjkzLjk1NC0xLjM1OCAxLjM4OEwyMi42MzUgNy42N2MtMS43NiAxLjc4My0zLjUwMyAzLjU4Ni01LjI4NCA1LjM0My0xLjM5NyAxLjM3OC0zLjI2NyAxLjM5Mi00LjY2LjAwNC0yLjc1Ny0yLjc0Ny01LjQ3Ni01LjU0LTguMjEtOC4zMTNMLjIuMzY4Qy4xNy4zMzUuMTQxLjI5OC4wMjQuMTY0IiBmaWxsPSIjNjczNUI5IiBtYXNrPSJ1cmwoI2IpIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIgMTQuODQ2KSI+PG1hc2sgaWQ9ImQiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2MiLz48L21hc2s+PHBhdGggZD0iTTExLjU2My4xODhjMS45OSAxLjYyNSA0Ljc2MyAxLjcxMyA2Ljg4OC4wMDMgMy44NDMgMi44NTYgNy42OTIgNS43MTggMTEuNTQgOC41OGwuMDAxLjEwNmMtLjMzNy4wNC0uNjc0LjExMi0xLjAxMi4xMTUtMS41Ny4wMTItMy4xNC4wMDctNC43MS4wMDctNy43MTMgMC0xNS40MjYgMC0yMy4xNC0uMDA2LS4zNyAwLS43NC0uMDY1LTEuMTEtLjFsLS4wMTgtLjExTDExLjU2My4xODgiIGZpbGw9IiM2NzM1QjkiIG1hc2s9InVybCgjZCkiLz48L2c+PHBhdGggZD0iTTEyIDE0LjFDOC4xMDIgMTcuMDM0IDQuMjU0IDE5LjkzLjM3NyAyMi44NDYuMTYgMjIuNDIxIDAgMjIuMDE4IDAgMjEuNTU3Yy4wMDMtNC42NDcuMDAyLTkuMjk0LjAwMi0xMy45NDEgMC0xLjIzNC0uMDA4LTIuNDY4LjAxLTMuNzAyLjAwNC0uMzI1LjA5LS42NDguMTUzLTEuMDY4TDEyIDE0LjFNMzMuODQgMi44NDZjLjA2Mi40NzMuMTUuODQzLjE1IDEuMjEzLjAwOSA1LjcwNi4wMDMgMTEuNDExLjAxIDE3LjExNyAwIC41NzYtLjA3IDEuMTIyLS4zNzcgMS42N0wyMiAxNC4xMDRjMy45MjktMy43MzUgNy45OTgtNy45MSAxMi0xMS43MTUiIGZpbGw9IiM2NzM1QjkiLz48L2c+PC9zdmc+"
+              width="34" height="24" alt="Post Card Icon"></p>
+          <p><a class="purple-text" href="https://support.phonepe.com/?__stm_source=email&amp;action=redirect"
+              target="_top">Send a message</a></p><br>          
+        </div>
+      </div>
+
+        <div class="col-md-4">
+          <h2>Grievances</h2>
+              <p>Get in touch with us to escalate any existing complaints, and we will ensure a quick resolution.</p>
+              <div class="cu-customer-support__content__item__cbp">
+                <p><img
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGlkPSJhIiBkPSJNLjAyNC4wNTJoMjkuOTczdjEzLjg0NEguMDI0eiIvPjxwYXRoIGlkPSJjIiBkPSJNLjAwMi4xODhoMjkuOTlWOUguMDAyeiIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIgLjg0NikiPjxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj48dXNlIHhsaW5rOmhyZWY9IiNhIi8+PC9tYXNrPjxwYXRoIGQ9Ik0uMDI0LjE2NEMuNDQuMTIuNzY4LjA1OCAxLjA5NC4wNTggOC42MDguMDUyIDE2LjEyMi4wNTQgMjMuNjM2LjA1NGMxLjc5IDAgMy41OC0uMDA1IDUuMzcuMDA0LjMwNC4wMDIuNjA3LjA2NSAxLjAxOC4xMTItLjUwNy41MTgtLjkzLjk1NC0xLjM1OCAxLjM4OEwyMi42MzUgNy42N2MtMS43NiAxLjc4My0zLjUwMyAzLjU4Ni01LjI4NCA1LjM0My0xLjM5NyAxLjM3OC0zLjI2NyAxLjM5Mi00LjY2LjAwNC0yLjc1Ny0yLjc0Ny01LjQ3Ni01LjU0LTguMjEtOC4zMTNMLjIuMzY4Qy4xNy4zMzUuMTQxLjI5OC4wMjQuMTY0IiBmaWxsPSIjNjczNUI5IiBtYXNrPSJ1cmwoI2IpIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIgMTQuODQ2KSI+PG1hc2sgaWQ9ImQiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2MiLz48L21hc2s+PHBhdGggZD0iTTExLjU2My4xODhjMS45OSAxLjYyNSA0Ljc2MyAxLjcxMyA2Ljg4OC4wMDMgMy44NDMgMi44NTYgNy42OTIgNS43MTggMTEuNTQgOC41OGwuMDAxLjEwNmMtLjMzNy4wNC0uNjc0LjExMi0xLjAxMi4xMTUtMS41Ny4wMTItMy4xNC4wMDctNC43MS4wMDctNy43MTMgMC0xNS40MjYgMC0yMy4xNC0uMDA2LS4zNyAwLS43NC0uMDY1LTEuMTEtLjFsLS4wMTgtLjExTDExLjU2My4xODgiIGZpbGw9IiM2NzM1QjkiIG1hc2s9InVybCgjZCkiLz48L2c+PHBhdGggZD0iTTEyIDE0LjFDOC4xMDIgMTcuMDM0IDQuMjU0IDE5LjkzLjM3NyAyMi44NDYuMTYgMjIuNDIxIDAgMjIuMDE4IDAgMjEuNTU3Yy4wMDMtNC42NDcuMDAyLTkuMjk0LjAwMi0xMy45NDEgMC0xLjIzNC0uMDA4LTIuNDY4LjAxLTMuNzAyLjAwNC0uMzI1LjA5LS42NDguMTUzLTEuMDY4TDEyIDE0LjFNMzMuODQgMi44NDZjLjA2Mi40NzMuMTUuODQzLjE1IDEuMjEzLjAwOSA1LjcwNi4wMDMgMTEuNDExLjAxIDE3LjExNyAwIC41NzYtLjA3IDEuMTIyLS4zNzcgMS42N0wyMiAxNC4xMDRjMy45MjktMy43MzUgNy45OTgtNy45MSAxMi0xMS43MTUiIGZpbGw9IiM2NzM1QjkiLz48L2c+PC9zdmc+"
+                    width="34" height="24" alt="Post Card Icon"></p>
+                <p><a class="purple-text" href="/grievance-policy/">Send a message</a></p>
+              </div>
+            
+        </div>
+
+        <div class="col-md-4">
+          <h2>EazyPay Representative</h2>
+          <p>You can direct your complaints to our regulating authority by using the link here and sending them a
+            message.</p>
+          <div class="cu-customer-support__content__item__cbp">
+            <p><img
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGlkPSJhIiBkPSJNLjAyNC4wNTJoMjkuOTczdjEzLjg0NEguMDI0eiIvPjxwYXRoIGlkPSJjIiBkPSJNLjAwMi4xODhoMjkuOTlWOUguMDAyeiIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIgLjg0NikiPjxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj48dXNlIHhsaW5rOmhyZWY9IiNhIi8+PC9tYXNrPjxwYXRoIGQ9Ik0uMDI0LjE2NEMuNDQuMTIuNzY4LjA1OCAxLjA5NC4wNTggOC42MDguMDUyIDE2LjEyMi4wNTQgMjMuNjM2LjA1NGMxLjc5IDAgMy41OC0uMDA1IDUuMzcuMDA0LjMwNC4wMDIuNjA3LjA2NSAxLjAxOC4xMTItLjUwNy41MTgtLjkzLjk1NC0xLjM1OCAxLjM4OEwyMi42MzUgNy42N2MtMS43NiAxLjc4My0zLjUwMyAzLjU4Ni01LjI4NCA1LjM0My0xLjM5NyAxLjM3OC0zLjI2NyAxLjM5Mi00LjY2LjAwNC0yLjc1Ny0yLjc0Ny01LjQ3Ni01LjU0LTguMjEtOC4zMTNMLjIuMzY4Qy4xNy4zMzUuMTQxLjI5OC4wMjQuMTY0IiBmaWxsPSIjNjczNUI5IiBtYXNrPSJ1cmwoI2IpIi8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIgMTQuODQ2KSI+PG1hc2sgaWQ9ImQiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2MiLz48L21hc2s+PHBhdGggZD0iTTExLjU2My4xODhjMS45OSAxLjYyNSA0Ljc2MyAxLjcxMyA2Ljg4OC4wMDMgMy44NDMgMi44NTYgNy42OTIgNS43MTggMTEuNTQgOC41OGwuMDAxLjEwNmMtLjMzNy4wNC0uNjc0LjExMi0xLjAxMi4xMTUtMS41Ny4wMTItMy4xNC4wMDctNC43MS4wMDctNy43MTMgMC0xNS40MjYgMC0yMy4xNC0uMDA2LS4zNyAwLS43NC0uMDY1LTEuMTEtLjFsLS4wMTgtLjExTDExLjU2My4xODgiIGZpbGw9IiM2NzM1QjkiIG1hc2s9InVybCgjZCkiLz48L2c+PHBhdGggZD0iTTEyIDE0LjFDOC4xMDIgMTcuMDM0IDQuMjU0IDE5LjkzLjM3NyAyMi44NDYuMTYgMjIuNDIxIDAgMjIuMDE4IDAgMjEuNTU3Yy4wMDMtNC42NDcuMDAyLTkuMjk0LjAwMi0xMy45NDEgMC0xLjIzNC0uMDA4LTIuNDY4LjAxLTMuNzAyLjAwNC0uMzI1LjA5LS42NDguMTUzLTEuMDY4TDEyIDE0LjFNMzMuODQgMi44NDZjLjA2Mi40NzMuMTUuODQzLjE1IDEuMjEzLjAwOSA1LjcwNi4wMDMgMTEuNDExLjAxIDE3LjExNyAwIC41NzYtLjA3IDEuMTIyLS4zNzcgMS42N0wyMiAxNC4xMDRjMy45MjktMy43MzUgNy45OTgtNy45MSAxMi0xMS43MTUiIGZpbGw9IiM2NzM1QjkiLz48L2c+PC9zdmc+"
+                width="34" height="24" alt="Post Card Icon"></p>
+            <p><a class="purple-text" href="/grievance-policy/">Send a message</a></p>
+          </div>
+        </div>
+
+      </div>
+    </div>   
+</body>
+
+<footer>
+  <div class="row ">
+    <div class="col-md-12" style="background-color: black; height: 30px; margin-left: 10px; padding-top: 10 px;">
+      <a href="#" style="font-size: 18px; font-weight: bolder; color: white; font-style: italic;">ABOUT</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="#" style="font-size: 18px; font-weight: bolder; color: white;font-style: italic;">LICENCES</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="#" style="font-size: 18px; font-weight: bolder; color: white; font-style: italic;">PARTNERS</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="#" style="font-size: 18px; font-weight: bolder; color: white; font-style: italic;">SPONSORS</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+      
+
+      <a href="#" style="font-size: 18px; font-weight: bolder; color: white;">SCROLL TO THE TOP</a>
+    </div>
+    
+
+  </div>
+</footer>
+
+</html>
+
+
+

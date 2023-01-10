@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const pwd = window.prompt("Enter the password to access the database");
+
+      if (pwd === "das12345") {
+        window.location.assign(`${location.origin}/fetchData`);
+      } else {
+        alert("You entered the Incorrect Password :(");
+        window.location.assign(`${location.origin}/home`);
+      }
+    </script>
+  </body>
+</html>

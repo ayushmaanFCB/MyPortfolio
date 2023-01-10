@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Offside</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/stylesheets/styles_offside.css">
+
+  <style>
+    /*.container, .col-md-12, .col-md-3, .col-md-9, .col-md-4, .col-md-10, .col-md-2{
+                border-style: solid;  border-color: white;              
+            }*/
+    div.fixed {
+      position: fixed;
+      top: 200px;
+      bottom: 150px;
+      right: -10px;
+      width: 100px;
+      border: 100px;
+      margin-right: 10px;
+      text-align: right;
+    }
+
+    div.fixed1 {
+      position: fixed;
+      top: 270px;
+      bottom: 250px;
+      right: -8px;
+      width: 50px;
+      border: 0px;
+      margin-right: 10px;
+      text-align: right;
+    }
+
+    div.fixed2 {
+      position: fixed;
+      top: 330px;
+      bottom: 250px;
+      right: -8px;
+      width: 50px;
+      border: 0px;
+      margin-right: 5px;
+      text-align: right;
+    }
+
+    #cart,
+    #id {
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+
+  <div class="container-fluid" style="background-color: #212529;">
+
+
+
+    <div class="fixed" style="background-color: yellow; height: 200px; width: 60px;">
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 560"
+          style="height: 65px; position:right;">
+          <path
+            d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+        </svg></a>
+
+    </div>
+    <div class="fixed1">
+      <a href="#"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 560">
+          <path
+            d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" />
+        </svg></a>
+    </div>
+    <div class="fixed2">
+      <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 512">
+          <path
+            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+        </svg></a>
+    </div>
+
+
+
+
+
+    <div class="row justify-content-around">
+      <div class="col-md-8" style="height: 100px;" id="header">
+        <label id="offside">OFFSIDE</label>
+      </div>
+
+      <div class="col-md-4" style=" padding-top: 30px; background-color: yellow;">
+        <div class="row">
+          <div class="col-md-4">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="height:38px;">
+                <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                <path
+                  d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z" />
+              </svg></a>
+            <label style="font-size: 16px; font-weight: bolder; padding-top: 10px; padding-left: 8px;">My
+              Account</label>
+          </div></a>
+          <div class="col-md-4" style="padding-left: 39px;">
+            <a href="#"><svg id="cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 776 712"
+                style="height: 55px; padding-top:5px">
+                <path
+                  d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z" />
+              </svg></a>
+            <label style="font-size: 17px; font-weight: bolder; padding-top: 0px;">Cart</label>
+          </div>
+          <div class="col-md-4" style="padding-top:6px;">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="60px" height="40px" fill="black"
+                class="bi bi-headset" viewBox="0 0 16 16">
+                <path
+                  d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z" />
+              </svg></a>
+            </svg>
+            <label style="font-size: 17px; font-weight: bolder; padding-top: 6px;">Services</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark"
+        style="border-bottom-style: solid;border-bottom-width: 5px;border-bottom-color:yellow ">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" style="font-style: italic; font-weight: bolder;">CHECK 'EM:</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  style="font-weight: bold; color: yellow;">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#club_jerseys" style="font-weight: bold; color: yellow;">Club Jerseys</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#international_jerseys" style="font-weight: bold; color: yellow;">International Jerseys</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false" style="font-weight: bold; color: yellow;">
+                  Other Products
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Scarfs</a></li>
+                  <li><a class="dropdown-item" href="#">Posters</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#customised_jerseys">Special Customised Jerseys</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Club / Country name" aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit">SEARCH</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+
+    <div class="row">
+      <div class="col-md-2"
+        style="padding-left: 40px;height:610px; background-color: #212529;border-right:solid; border-right-color:yellow; border-right-width: 5px; border-bottom:solid; border-bottom-color:yellow; border-bottom-width: 5px;">
+        <img src="/images/adidas.png" style="width: 150px; height: 150px;">
+        <img src="/images/puma.png" style="width: 150px; height: 150px;">
+        <img src="/images/jordans.png" style="width: 150px; height: 150px;">
+        <img src="/images/nike.png" style="width: 150px; height: 150px;">
+
+
+
+      </div>
+
+
+      <div class="col-md-10"
+        style="height:610px; background-color: #212529; border-bottom:solid; border-bottom-color:yellow; border-bottom-width: 5px;">
+
+        <div class="row">
+          
+          <div class="col-md-12" style=" background-color: #212529; padding-left: 230px; padding-top: 40px;">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+              style="width: 800px; height: 535px; border-style: solid;">
+              
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                  aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                  aria-label="Slide 6"></button>
+
+              </div>
+              
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                  <img src="https://i1.t4s.cz/galleries/99/229033.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/2018/05/21135419/Westside5.jpg"
+                    class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="https://pbs.twimg.com/media/D1In-V7WwAENACw.jpg:large" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="/images/realJersey.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="/images/inter.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                  <img src="/images/barca.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              
+             
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+          
+        </div>
+        
+      </div>
+
+
+
+
+
+      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+      <div class="elfsight-app-56ac323a-9e9b-4600-bb53-298154fb8af1"></div>
+
+
+
+
+
+
+      <div class="row">
+        <div class="col-md-12" style="background-color: #212529;">
+
+          <div class="album py-5 bg-dark">
+
+            <h1 style="margin-top: -35px;color: yellow; text-align: center; font-family: BolsterBold; font-size: 60px;">
+              OUR COLLECTION</h1>
+            <br>
+
+            <div class="container" style="background-color: #212529;">
+
+              <label style="color: yellow; font-size: 40px; font-family: BolsterBold" id="club_jerseys">CLUB JERSEYS:</label>
+
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <div class="card-body" style="background-color:#212529;">
+                      <p style="text-align: center;"><img src="/images/barca_jersey.png" height="250px">
+                        <hr>
+
+                        <p style="color: yellow; font-size: 18px;">FC Barcelona Home Kit 2021-2022</p>
+                      
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-warning btn-lg">Buy Now</button>
+                          <button type="button" class="btn btn-outline-warning btn-lg">Add to Cart</button>
+                        </div>
+                        <h1 class="card-text" style="color: yellow;">$100</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <div class="card-body" style="background-color:#212529;">
+                      <p style="text-align: center;"><img src="/images/bayern.png" height="250px">
+                        <hr>
+
+                      <p style="color: yellow; font-size: 18px;">Bayern Munich Away Kit 2021-2022</p>
+                      
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-warning btn-lg">Buy Now</button>
+                          <button type="button" class="btn btn-outline-warning btn-lg">Add to Cart</button>
+                        </div>
+                        <h1 class="card-text" style="color: yellow;">$100</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <div class="card-body" style="background-color:#212529;">
+                      <p style="text-align: center;"><img src="/images/madrid.png" height="250px">
+                        <hr>
+
+                      <p style="color: yellow; font-size: 18px;">Real Madrid Away Kit 2021-2022</p>
+                     
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-warning btn-lg">Buy Now</button>
+                          <button type="button" class="btn btn-outline-warning btn-lg">Add to Cart</button>
+                        </div>
+                        <h1 class="card-text" style="color: yellow;">$100</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <br><br>
+
+              <label style="color: yellow; font-size: 40px; font-family: BolsterBold" id="international_jerseys">INTERNATIONAL JERSEYS:</label>
+
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <div class="card-body" style="background-color:#212529;">
+                      <p style="text-align: center;"><img src="/images/portugal.png" height="250px">
+                        <hr>
+
+                      <p style="color: yellow; font-size: 18px;">Portugal Away Kit 2021-2022</p>
+                     
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-warning btn-lg">Buy Now</button>
+                          <button type="button" class="btn btn-outline-warning btn-lg">Add to Cart</button>
+                        </div>
+                        <h1 class="card-text" style="color: yellow;">$100</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <div class="card-body" style="background-color:#212529;">
+                      <p style="text-align: center;"><img src="/images/argentina.png" height="250px">
+                        <hr>
+
+                      <p style="color: yellow; font-size: 18px;">Argentina Home Kit 2021-2022</p>
+                      </p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-warning btn-lg">Buy Now</button>
+                          <button type="button" class="btn btn-outline-warning btn-lg">Add to Cart</button>
+                        </div>
+                        <h1 class="card-text" style="color: yellow;">$100</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <div class="card-body" style="background-color:#212529;">
+                      <p style="text-align: center;"><img src="/images/germany.png" height="250px">
+                        <hr>
+
+                      <p style="color: yellow; font-size: 18px;">Germany Home Kit 2021-2022</p>
+                
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-warning btn-lg">Buy Now</button>
+                          <button type="button" class="btn btn-outline-warning btn-lg">Add to Cart</button>
+                        </div>
+                        <h1 class="card-text" style="color: yellow;">$100</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <br><br>
+
+              <label style="color: yellow; font-size: 40px; font-family: BolsterBold" id="customised_jerseys">CUSTOMISED JERSEYS:</label>
+
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <div class="card-body" style="background-color:#212529;">
+                      <p style="text-align: center;"><img src="/images/cust3.png" height="250px">
+                        <hr>
+
+                      <p style="color: yellow; font-size: 18px;">Sample Customised Kit</p>
+                     
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-warning btn-lg">Buy Now</button>
+                          <button type="button" class="btn btn-outline-warning btn-lg">Add to Cart</button>
+                        </div>
+                        <h1 class="card-text" style="color: yellow;">$100</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <div class="card-body" style="background-color:#212529;">
+                      <p style="text-align: center;"><img src="/images/cust2.png" height="250px">
+                        <hr>
+
+                      <p style="color: yellow; font-size: 18px;">Sample Customised Kit</p>
+                      </p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-warning btn-lg">Buy Now</button>
+                          <button type="button" class="btn btn-outline-warning btn-lg">Add to Cart</button>
+                        </div>
+                        <h1 class="card-text" style="color: yellow;">$100</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card shadow-sm">
+                    <div class="card-body" style="background-color:#212529;">
+                      <p style="text-align: center;"><img src="/images/cust1.png" height="250px">
+                        <hr>
+
+                        <p style="color: yellow; font-size: 18px;">Sample Customised Kit</p>
+              
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-warning btn-lg">Buy Now</button>
+                          <button type="button" class="btn btn-outline-warning btn-lg">Add to Cart</button>
+                        </div>
+                        <h1 class="card-text" style="color: yellow;">$100</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+          <div class="row ">
+            <div class="col-md-12" style="background-color: yellow; height: 30px; margin-left: 10px; padding-top: 10 px;">
+              <a href="#" style="font-size: 18px; font-weight: bolder; color: #212529; font-style: italic;">ABOUT</a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="#" style="font-size: 18px; font-weight: bolder; color: #212529;font-style: italic;">HELP</a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="#" style="font-size: 18px; font-weight: bolder; color: #212529; font-style: italic;">CONTACT</a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="#" style="font-size: 18px; font-weight: bolder; color: #212529; font-style: italic;">OUR ADDRESS</a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              
+              
+
+              <a href="#" style="font-size: 18px; font-weight: bolder; color: #212529;">SCROLL TO THE TOP</a>
+            </div>
+            
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+        </div> <!-- Container-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+  </body>
+
+</html>

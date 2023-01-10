@@ -1,0 +1,38 @@
+.navbar-nav {
+    margin-left: auto;
+  }
+
+li{
+    font-size: 24px;
+    font-weight: bolder;
+    color: yellow;
+ }
+
+ .btn-warning-outline{
+   border-color: #FFF800;
+   color: #FFF800;
+   border-width: 3.5px;
+   font-weight: bolder;
+ }
+
+ h3, h1, hr, h2, h4, h5, p{
+    color: yellow;
+}
+
+hr{
+  border-width: 3px;
+}
+
+
+.container-fluid{
+  background-color: black;
+}
+
+body{
+  background-color: black;
+}
+
+.alert{
+  background-color: #fff800;
+  display: none;
+}
